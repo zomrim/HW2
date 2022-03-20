@@ -12,9 +12,16 @@ typedef struct {
 	};
 }worker;
 
+typedef struct WorkerList
+{
+	worker* data;
+	struct WorkerList* next;
+} WorkerList;
+
+int yearType();
 worker* CreateWorker(int);
 void PrintWorker(worker*, int);
-int yearType();
+WorkerList* addworker(worker* head, worker* w);
 
 void main() {
 	int yt = yearType();	
@@ -79,4 +86,8 @@ void PrintWorker(worker* w, int yt) {
 		printf("\nyear of start: %s", w->hew_year);
 	if (yt == 0)
 		printf("\nyear of start: %ld", w->geo_year);
+}
+
+WorkerList* addworker(worker* head, worker* w) {
+	WorkerList wl1 = { 0 };
 }
