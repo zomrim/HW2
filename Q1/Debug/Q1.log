@@ -1,11 +1,14 @@
 ﻿  Q1.c
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(36,24): warning C4047: 'function': 'WorkerList *' differs in levels of indirection from 'WorkerList **'
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(36,19): warning C4024: 'addworker': different types for formal and actual parameter 1
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(73,6): warning C4013: 'gets' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(74,46): warning C4013: 'strlen' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(76,8): warning C4013: 'strcpy' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(62): warning C4715: 'yearType': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(185): warning C4716: 'deleteWorstWorker': must return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(169): warning C4715: 'index': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(147): warning C4715: 'addworker': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(42,24): warning C4047: 'function': 'WorkerList *' differs in levels of indirection from 'WorkerList **'
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(42,19): warning C4024: 'addworker': different types for formal and actual parameter 1
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(83,6): warning C4013: 'gets' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(84,46): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(86,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(211,31): warning C4244: '*=': conversion from 'float' to 'unsigned long', possible loss of data
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(239,8): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(72): warning C4715: 'yearType': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(185): warning C4715: 'indexRec': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(172): warning C4715: 'index': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(154): warning C4715: 'addworker': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(205): warning C4715: 'deleteWorstWorker': not all control paths return a value
   Q1.vcxproj -> C:\Users\Omrih\source\repos\HW2\Debug\Q1.exe
