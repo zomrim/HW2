@@ -34,21 +34,28 @@ void main() {
 	worker *w1 = CreateWorker();
 	worker *w2 = CreateWorker();
 	worker* w3 = CreateWorker();
-	/*worker* w4 = CreateWorker();*/
-	/*PrintWorker(w1); 
+	worker* w4 = CreateWorker();
+	PrintWorker(w1); 
 	PrintWorker(w2);
-	PrintWorker(w3);*/
+	PrintWorker(w3);
+	PrintWorker(w4);
 	WorkerList* head = NULL;
 	head = addworker(&head, w1);
 	head = addworker(head, w2);
 	head = addworker(head, w3);
+	head = addworker(head, w4);
+	unsigned long id_to_check = 0;
+	printf("\nEnter ID to check position in list: ");
+	scanf("%ul", &id_to_check);
+	int index_res1 = index(head, id_to_check);
+	int index_res2 = indexRec(head, id_to_check);
+	head = deleteWorstWorker(head);
+	float sal_raise = 0;
+	printf("\nEnter in decimal number the precentage to update all workers salarys: ");
+	scanf("%f", &sal_raise); //we assumed that user entered num bigger than 1
+	update_worker(head, sal_raise);
 	head = reverse(head);
-	/*head = addworker(head, w4);*/
-	/*int checkID = index(head, 5680);*/
-	/*int checkID = indexRec(head, 5680);*/
-	/*head = deleteWorstWorker(head);*/
-	/*update_worker(head, 1.5);*/
-	/*freeWorkers(head);*/
+	freeWorkers(head);
 }
 
 //function to choose year type
@@ -107,9 +114,9 @@ void PrintWorker(worker* w) {
 	printf("\nname: %s", w->name);
 	printf("\nsalary: %ld", w->salary);
 	if (w->yt == 1)
-		printf("\nyear of start: %s", w->hew_year);
+		printf("\nyear of start: %s\n", w->hew_year);
 	if (w->yt == 0)
-		printf("\nyear of start: %ld", w->geo_year);
+		printf("\nyear of start: %ld\n", w->geo_year);
 }
 
 WorkerList* addworker(WorkerList* head, worker* w) {
@@ -213,23 +220,25 @@ void update_worker(WorkerList* head, float percent) {
 	}
 }
 
-//WorkerList* reverse(WorkerList* head) {
-//	int counter = 0;
-//	WorkerList* ptr = head;
-//	while (ptr != NULL)
-//	{
-//		counter++;
-//		ptr = ptr->next;
-//	}
-//	for (int i = 0; i < counter; i++)
-//	{
-//		WorkerList* temp = head->next;
-//		head->next = head->next->next;
-//		temp->next = head;
-//		head = temp;
-//	}
-//	return head;
-//}
+WorkerList* reverse(WorkerList* head) {
+	WorkerList* prev, *current;
+	if (head != NULL) //start reverse only if the list isn't empty
+	{
+		prev = head;
+		current = head->next;
+		head = head->next;
+		prev->next = NULL; // make first worker as last worker in list
+		while (head != NULL)
+		{
+			head = head->next;
+			current->next = prev;
+			prev = current;
+			current = head;
+		}
+		head = prev; // make last worker as head of the list
+	}
+	return head;
+}
 
 void freeWorkers(WorkerList* head) {
 	WorkerList* ptr = head;
