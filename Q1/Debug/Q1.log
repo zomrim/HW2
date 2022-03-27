@@ -1,14 +1,14 @@
 ﻿  Q1.c
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(43,24): warning C4047: 'function': 'WorkerList *' differs in levels of indirection from 'WorkerList **'
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(43,19): warning C4024: 'addworker': different types for formal and actual parameter 1
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(90,6): warning C4013: 'gets' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(91,46): warning C4013: 'strlen' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(93,8): warning C4013: 'strcpy' undefined; assuming extern returning int
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(218,31): warning C4244: '*=': conversion from 'float' to 'unsigned long', possible loss of data
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(248,8): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(79): warning C4715: 'yearType': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(179): warning C4715: 'index': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(161): warning C4715: 'addworker': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(192): warning C4715: 'indexRec': not all control paths return a value
-C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(212): warning C4715: 'deleteWorstWorker': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(40,24): warning C4047: 'function': 'WorkerList *' differs in levels of indirection from 'WorkerList **'
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(40,19): warning C4024: 'addworker': different types for formal and actual parameter 1
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(95,6): warning C4013: 'gets' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(96,46): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(98,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(223,31): warning C4244: '*=': conversion from 'float' to 'unsigned long', possible loss of data
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(255,8): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(84): warning C4715: 'yearType': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(184): warning C4715: 'index': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(166): warning C4715: 'addworker': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(197): warning C4715: 'indexRec': not all control paths return a value
+C:\Users\Omrih\source\repos\HW2\Q1\Q1.c(217): warning C4715: 'deleteWorstWorker': not all control paths return a value
   Q1.vcxproj -> C:\Users\Omrih\source\repos\HW2\Debug\Q1.exe

@@ -29,32 +29,37 @@ WorkerList* deleteWorstWorker(WorkerList* head);
 void update_worker(WorkerList* head, float percent);
 WorkerList* reverse(WorkerList* head);
 void freeWorkers(WorkerList* head);
+void printWorkersList(WorkerList* head);
 
 void main() {
 	worker *w1 = CreateWorker();
 	worker *w2 = CreateWorker();
 	worker* w3 = CreateWorker();
 	worker* w4 = CreateWorker();
-	PrintWorker(w1); 
-	PrintWorker(w2);
-	PrintWorker(w3);
-	PrintWorker(w4);
 	WorkerList* head = NULL;
 	head = addworker(&head, w1);
 	head = addworker(head, w2);
 	head = addworker(head, w3);
 	head = addworker(head, w4);
+	printWorkersList(head);
 	unsigned long id_to_check = 0;
 	printf("\nEnter ID to check position in list: ");
-	scanf("%ul", &id_to_check);
+	scanf("%lu", &id_to_check);
 	int index_res1 = index(head, id_to_check);
+	printf("\nposition of %ul is: %d", id_to_check, index_res1);
+	printf("\nEnter another ID to check position in list: ");
+	scanf("%lu", &id_to_check);
 	int index_res2 = indexRec(head, id_to_check);
+	printf("\nposition of %ul is: %d", id_to_check, index_res2);
 	head = deleteWorstWorker(head);
+	printWorkersList(head);
 	float sal_raise = 0;
 	printf("\nEnter in decimal number the precentage to update all workers salarys: ");
 	scanf("%f", &sal_raise); //we assumed that user entered num bigger than 1
 	update_worker(head, sal_raise);
+	printWorkersList(head);
 	head = reverse(head);
+	printWorkersList(head);
 	freeWorkers(head);
 }
 
@@ -242,6 +247,8 @@ WorkerList* reverse(WorkerList* head) {
 
 void freeWorkers(WorkerList* head) {
 	WorkerList* ptr = head;
+	if (head == NULL)
+		return;
 	if (head->next == NULL)//case when only one worker remains in list
 	{
 		free(head);
@@ -260,4 +267,19 @@ void freeWorkers(WorkerList* head) {
 		ptr = ptr->next;
 	}
 	freeWorkers(head);
+}
+
+void printWorkersList(WorkerList* head) {
+	printf("\nWORKERS LIST:\n"); 
+	if (head == NULL) //case list is empty
+	{
+		printf("List is empty!\n");
+		return;
+	}
+	while (head != NULL)
+	{
+		PrintWorker(head->data); //use PrintWorker func to print the list
+		head = head->next;
+	}
+	return;
 }
