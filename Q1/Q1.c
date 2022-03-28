@@ -46,11 +46,11 @@ void main() {
 	printf("\nEnter ID to check position in list: ");
 	scanf("%lu", &id_to_check);
 	int index_res1 = index(head, id_to_check);
-	printf("\nposition of %ul is: %d", id_to_check, index_res1);
+	printf("\nposition of %lu is: %d", id_to_check, index_res1);
 	printf("\nEnter another ID to check position in list: ");
 	scanf("%lu", &id_to_check);
 	int index_res2 = indexRec(head, id_to_check);
-	printf("\nposition of %ul is: %d", id_to_check, index_res2);
+	printf("\nposition of %lu is: %d", id_to_check, index_res2);
 	head = deleteWorstWorker(head);
 	printWorkersList(head);
 	float sal_raise = 0;
